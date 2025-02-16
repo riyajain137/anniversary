@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anniversary Surprise</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        button {
+            margin-top: 15px;
+            padding: 5px 15px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            background: #ff4a6e;
+            color: white;
+        }
+        button:hover {
+            background: #e63950;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Enter Today's Date</h2>
+        <input type="date" id="dateInput">
+        <button onclick="checkDate()">Check</button>
+        
+        <div id="specialMessage" class="hidden">
+            <p>Ohh! There's something special today! 🎉</p>
+            <button onclick="revealMessage()">Reveal</button>
+        </div>
+
+        <div id="celebrateMessage" class="hidden">
+            <img src="photo4.jpg" alt="Happy Anniversary" style="width: 100%; max-width: 400px; border-radius: 10px;">
+            <h2>It's a day to celebrate your love! ❤️</h2>
+            <button onclick="nextPage()">Curious?</button>
+        </div>
+    </div>
+
+    <script>
+        function checkDate() {
+            const inputDate = document.getElementById('dateInput').value;
+            const anniversaryDate = "2025-02-18";
+
+            if (inputDate === anniversaryDate) {
+                document.getElementById('specialMessage').classList.remove('hidden');
+            }
+        }
+
+        function revealMessage() {
+            document.getElementById('specialMessage').classList.add('hidden');
+            document.getElementById('celebrateMessage').classList.remove('hidden');
+        }
+
+        function nextPage() {
+            window.location.href = "journey.html";
+        }
+    </script>
+
+</body>
+</html>

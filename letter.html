@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Letter for You</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+            font-family: 'Dancing Script', cursive;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+        .letter-container {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            width: 60%;
+            max-width: 600px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 2s forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .letter-title {
+            font-size: 2em;
+            color: #ff4a6e;
+            margin-bottom: 20px;
+        }
+        .letter-text {
+            font-size: 1.3em;
+            line-height: 1.8;
+            color: #444;
+        }
+        .btn {
+            margin-top: 20px;
+            padding: 12px 30px;
+            background: #ff4a6e;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.3em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .btn:hover {
+            background: #e63950;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="letter-container">
+        <div class="letter-title">A Letter for You ❤️</div>
+        <p class="letter-text">
+            Dear Mom & Dad, <br><br>
+            Words cannot express how much you both mean to me. Your love, strength, and kindness inspire me every day.
+            On this special day, I just want to say **thank you** for being the most wonderful parents ever.  
+            Wishing you a lifetime of happiness together. Love you both! 💖  
+        </p>
+        <button class="btn" onclick="goBack()">Go Back</button>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
+<div id="nav-container"></div>
+<script src="nav.js"></script>
+
+
+<script>
+    function goBack() {
+        alert("Don't forget to enjoy your day! ❤️");  
+        window.location.href = "last.html";  // Change this if you want a different page
+    }
+</script>
+
